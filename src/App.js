@@ -1,6 +1,6 @@
 import "./App.css";
 import Card from "./Card";
-import person from "./person";
+
 import React, { useState } from "react";
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
   const [website, setWebsite] = useState("");
   const [avatar, setAvatar] = useState("");
   const [gender, setGender] = useState("");
-  const [html, setHtml] = useState(false);
-  const [css, setCss] = useState(false);
-  const [js, setJs] = useState(false);
+  // const [html, setHtml] = useState(false);
+  // const [css, setCss] = useState(false);
+  // const [js, setJs] = useState(false);
   const [skills, setSkills] = useState({
     html: false,
     css: false,
@@ -158,7 +158,7 @@ function App() {
                   name=""
                   id="html"
                   value="html"
-                  checked={skills[html]}
+                  checked={skills.html}
                   onChange={handleskills}
                 />
                 <label htmlFor="js">js </label>
@@ -167,7 +167,7 @@ function App() {
                   name=""
                   id="js"
                   value="js"
-                  checked={skills[js]}
+                  checked={skills.js}
                   onChange={handleskills}
                 />
                 <label htmlFor="css">css </label>
@@ -176,7 +176,7 @@ function App() {
                   name=""
                   id="css"
                   value="css"
-                  checked={skills[css]}
+                  checked={skills.css}
                   onChange={handleskills}
                 />
               </div>
